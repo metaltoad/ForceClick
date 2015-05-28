@@ -12,6 +12,9 @@
 		271B11841B14EC98003289C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271B11831B14EC98003289C8 /* Images.xcassets */; };
 		271B11871B14EC98003289C8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271B11851B14EC98003289C8 /* MainMenu.xib */; };
 		271B11931B14EC98003289C8 /* ForceClickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B11921B14EC98003289C8 /* ForceClickTests.m */; };
+		271B119E1B14ED63003289C8 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B119D1B14ED63003289C8 /* MainWindowController.m */; };
+		271B11A11B150EFF003289C8 /* TrackingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B11A01B150EFF003289C8 /* TrackingView.m */; };
+		271B11A41B15188B003289C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271B11A21B151874003289C8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,11 @@
 		271B118C1B14EC98003289C8 /* ForceClickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForceClickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		271B11911B14EC98003289C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271B11921B14EC98003289C8 /* ForceClickTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForceClickTests.m; sourceTree = "<group>"; };
+		271B119C1B14ED63003289C8 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		271B119D1B14ED63003289C8 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		271B119F1B150EFF003289C8 /* TrackingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingView.h; sourceTree = "<group>"; };
+		271B11A01B150EFF003289C8 /* TrackingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingView.m; sourceTree = "<group>"; };
+		271B11A21B151874003289C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271B11A41B15188B003289C8 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,10 @@
 			children = (
 				271B117E1B14EC98003289C8 /* AppDelegate.h */,
 				271B117F1B14EC98003289C8 /* AppDelegate.m */,
+				271B119C1B14ED63003289C8 /* MainWindowController.h */,
+				271B119D1B14ED63003289C8 /* MainWindowController.m */,
+				271B119F1B150EFF003289C8 /* TrackingView.h */,
+				271B11A01B150EFF003289C8 /* TrackingView.m */,
 				271B11831B14EC98003289C8 /* Images.xcassets */,
 				271B11851B14EC98003289C8 /* MainMenu.xib */,
 				271B117C1B14EC98003289C8 /* Supporting Files */,
@@ -88,6 +101,7 @@
 		271B117C1B14EC98003289C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				271B11A21B151874003289C8 /* QuartzCore.framework */,
 				271B117D1B14EC98003289C8 /* Info.plist */,
 				271B11811B14EC98003289C8 /* main.m */,
 			);
@@ -160,6 +174,7 @@
 				TargetAttributes = {
 					271B11781B14EC98003289C8 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = AA7VMMPRLR;
 					};
 					271B118B1B14EC98003289C8 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -210,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271B119E1B14ED63003289C8 /* MainWindowController.m in Sources */,
 				271B11821B14EC98003289C8 /* main.m in Sources */,
 				271B11801B14EC98003289C8 /* AppDelegate.m in Sources */,
+				271B11A11B150EFF003289C8 /* TrackingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Metal Toad Media, Inc.";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ForceClick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -339,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Metal Toad Media, Inc.";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ForceClick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
